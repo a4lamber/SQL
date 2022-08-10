@@ -39,7 +39,7 @@ sequenceDiagram
     participant L as Local directory
     participant S as Staging area
     participant R as Remote repository
-    L->>S: git add
+    L->>S: git add + git status (if green) + git commit
     S->>L: git reset
     S->>R: git push
     R->>S: git pull
