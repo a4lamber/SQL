@@ -12,12 +12,12 @@
 # How to use git
 
 ## What is git?
-`git` is a tool for handling all version control. It is often confused with `github`. The main difference is that `git` is the tool that handles all of this behind the scene while `github` is the user interface on top of it.
+`git` is a tool for handling version control. It is often confused with `github`. The difference is that `git` is the tool that handles all of this behind the scene while `github` is the user interface on top of it.
 
 
 ## git Architecture
 
-The main git architecture is shown in the diagram below. 
+The main git architecture is shown in the diagram below,
 
 ```mermaid
 flowchart LR
@@ -27,6 +27,27 @@ flowchart LR
     block1 --- block2
     block2 --- block3
 ```
+
+- local working direcotry (Only you can see)
+- staging area (buffer area)
+- remote repository (every1 can see if public)
+
+The default name in local directory is called **master** while the name for remote repository is called **origin**
+
+```mermaid
+sequenceDiagram
+    participant L as Local directory
+    participant S as Staging area
+    participant R as Remote repository
+    L->>S: git add
+    S->>L: git reset
+    S->>R: git push
+    R->>S: git pull
+```
+
+However, when you are setting up the connection between your local direcotry and remote repository for the first time, you need to initialize with `git push -u origin master` so for the rest of the time, you just need to use `git push`.
+
+
 
 
 
