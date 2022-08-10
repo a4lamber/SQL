@@ -8,6 +8,7 @@
 - [How to use git](#how-to-use-git)
   - [What is git?](#what-is-git)
   - [git Architecture](#git-architecture)
+  - [Reference](#reference)
 
 # How to use git
 
@@ -51,5 +52,6 @@ However, when you are setting up the connection between your local direcotry and
 
 
 
-
-
+## Reference
+[git-tech with tim](https://www.youtube.com/watch?v=DVRQoVRzMIY)
+[git-Corey schafer](https://www.youtube.com/watch?v=HVsySz-h9r4)
