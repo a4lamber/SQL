@@ -22,7 +22,15 @@
 - `git push`: push my files from local machine to remote repository held by `github`
 
 
-`Merge conflicts` is a problem might happen when two developer are trying to edit the same file. It is usually done manually.
+`Merge conflicts` is a problem might happen when two developer are trying to edit the same file. It is usually done manually, example snippet is shown below
+
+```python
+<<<<<<< HEAD
+test_msg = "commit!+1"
+=======
+test_msg = "commit!-1"
+>>>>>>> 41093e175ace0787d5b8ce8135e7152521d1e3e0
+```
 
 
 ## git Architecture
