@@ -90,6 +90,11 @@ However, when you are setting up the connection between your local direcotry and
 
 ## Reference
 
-- [git-tech with tim](https://www.youtube.com/watch?v=DVRQoVRzMIY)
-- [git-Corey schafer](https://www.youtube.com/watch?v=HVsySz-h9r4)
-- [Harvard CS 50 git](https://www.youtube.com/watch?v=eulnSXkhE7I&t=53s)
+From what i have been watching so far, the CS 50 by Harvard gives the best and clearest explanation condensed in 47 mins ish.
+ 
+- [x] git-Harvard CS 50 by Brian https://www.youtube.com/watch?v=eulnSXkhE7I&t=53s
+- [x] git-tech with tim https://www.youtube.com/watch?v=DVRQoVRzMIY
+- [x] git-Corey schafer https://www.youtube.com/watch?v=HVsySz-h9r4
+
+
+
