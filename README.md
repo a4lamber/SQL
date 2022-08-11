@@ -7,14 +7,18 @@
 - [Table of content](#table-of-content)
 - [How to use git](#how-to-use-git)
   - [What is git?](#what-is-git)
+  - [Some basic command](#some-basic-command)
   - [git Architecture](#git-architecture)
   - [Reference](#reference)
 
 # How to use git
 
 ## What is git?
-`git` is a tool for handling version control. It is often confused with `github`. The difference is that `git` is the tool that handles all of this behind the scene while `github` is the user interface on top of it.
+`git` is a version control software. It is often confused with `github`. The difference is that `git` is the tool that handles all of this behind the scene while `github` is the user interface and hold `remote repository`.
 
+## Some basic command
+- `git clone`: get a copy of that repository on our local machine
+- 
 
 ## git Architecture
 
@@ -52,6 +56,10 @@ However, when you are setting up the connection between your local direcotry and
 
 
 
+
+
 ## Reference
-[git-tech with tim](https://www.youtube.com/watch?v=DVRQoVRzMIY)
-[git-Corey schafer](https://www.youtube.com/watch?v=HVsySz-h9r4)
+
+- [git-tech with tim](https://www.youtube.com/watch?v=DVRQoVRzMIY)
+- [git-Corey schafer](https://www.youtube.com/watch?v=HVsySz-h9r4)
+- [Harvard CS 50 git](https://www.youtube.com/watch?v=eulnSXkhE7I&t=53s)
