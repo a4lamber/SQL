@@ -18,8 +18,9 @@
 
 ## Some basic command
 - `git clone`: get a copy of that repository on our local machine
+- `git status`: what's going on in my repository
+- `git push`: push my files from local machine to remote repository held by `github`
 - 
-
 ## git Architecture
 
 The main git architecture is shown in the diagram below,
