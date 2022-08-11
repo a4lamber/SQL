@@ -1,5 +1,4 @@
 import numpy as np
 
 
-test_msg = "commit!+-1"
-
+test_msg = "commit!-1"
