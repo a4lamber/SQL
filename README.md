@@ -20,7 +20,11 @@
 - `git clone`: get a copy of that repository on our local machine
 - `git status`: what's going on in my repository
 - `git push`: push my files from local machine to remote repository held by `github`
-- 
+
+
+`Merge conflicts` is a problem might happen when two developer are trying to edit the same file. It is usually done manually.
+
+
 ## git Architecture
 
 The main git architecture is shown in the diagram below and it is a 2-step method consisting of `add` and `commit`. The reason why it's a 2-step method is that it is so good.
