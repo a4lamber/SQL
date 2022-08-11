@@ -9,6 +9,7 @@
   - [What is git?](#what-is-git)
   - [Some basic command](#some-basic-command)
   - [git Architecture](#git-architecture)
+  - [What is branch?](#what-is-branch)
   - [Reference](#reference)
 
 # How to use git
@@ -20,6 +21,12 @@
 - `git clone`: get a copy of that repository on our local machine
 - `git status`: what's going on in my repository
 - `git push`: push my files from local machine to remote repository held by `github`
+- `git log`: show a history of log
+- `git reset`: going back
+  - `--hard` 
+  - `--soft`
+
+
 
 
 `Merge conflicts` is a problem might happen when two developer are trying to edit the same file. It is usually done manually, example snippet is shown below
@@ -31,6 +38,8 @@ test_msg = "commit!+1"
 test_msg = "commit!-1"
 >>>>>>> 41093e175ace0787d5b8ce8135e7152521d1e3e0
 ```
+
+
 
 
 ## git Architecture
@@ -66,7 +75,14 @@ sequenceDiagram
 However, when you are setting up the connection between your local direcotry and remote repository for the first time, you need to initialize with `git push -u origin master` so for the rest of the time, you just need to use `git push`.
 
 
+## What is branch?
+> branch: add feature and fixing bug separately
 
+> `HEAD` in git means where you at.
+
+- `git branch`
+- `git merge`
+- `git checkout`: `git checkout -b feature` create a branch
 
 
 
