@@ -81,9 +81,10 @@ However, when you are setting up the connection between your local direcotry and
 > `HEAD` in git means where you at.
 
 - `git branch`
+  - `git branch -D branchname`: hard delete the branch
 - `git merge`
-- `git checkout`: `git checkout -b feature` create a branch
-
+- `git checkout`: Switch to a different branch 
+  - `git checkout -b feature` create a branch
 
 
 
