@@ -58,4 +58,29 @@ Then vacuum tubes are no longer reliable enough.
 
 >`ALU`: Arithmetic logic unit
 
+- `half adder`: XOR + AND
+- `full adder`: 
+- 8 full adder = 8-bit
 
+
+## 6_Regiseter_and_RAM
+
+`AND-OR latch`: Combine `And` gate with `or` gate.
+
+
+`Gated latch`: able to stay 1 bit information. 
+```mermaid
+flowchart LR
+    block0("Data in")
+    block1("Write Enable")
+    block2("Gated Latch")
+    block3("Data out")
+    block0 --> block2
+    block1 --> block2
+    block2 --> block3
+```
+
+A group of latches operating like this is called **a register**, which holds a single number, and the number, and the number of bits in a register is called width.
+
+
+`16 x 16 latch matrix`: 
