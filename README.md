@@ -1,6 +1,6 @@
 # README
 ---
->This is my journey for learning data science and more in computer science.
+>This is my journey for learning data science and computer science.
 
 
 # Overview
@@ -9,3 +9,6 @@ Hi, my name is Adam Zhang and my background is in mechanical engineering. During
 
 
 
+# Inspiring people
+---
+In this world of free knowledge, i deeply appreciate youtuber for sharing their knowledge and prociding high-quality content that i wouldn't have access to.

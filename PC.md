@@ -235,4 +235,42 @@ An interface between computer and human are needed.
 
 
 # 11_The first programming language
+---
+
+`Assembly language`: Assembly languages have **direct, one-to-one mapping to machine instructions (binary)**. But a single line of high-level programming language might result in dozens of instructions being executed by the CPU.
+
+Harvard Mark 1
+
+
+
+# 12_Statement and Functions
+---
+
+- statement
+- control flow statement
+  - Assignment statement
+  - conditional statement
+    - if
+    - for
+    - while
+  - return statement
+
+
+For a code that is repeatable, you don't really want to copy and paste it everywhere, since it will result in:
+- changing variable name
+- more lines of codes, higher chance of bugs
+
+Therefore, to compartentalize and hide complexity, programing language packs it into 
+- function, method or subroutine
+
+# 13_Algorithm
+ ---
+
+Outline:
+- selection sort
+- merge sort
+- graph search
+
+ # 14_Data structure
+---
 
