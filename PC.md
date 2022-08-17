@@ -273,4 +273,12 @@ Outline:
 
  # 14_Data structure
 ---
+`data structure`: different ways of storing data on your computer.
+
+- [Java version of Struct](https://stackoverflow.com/questions/5168144/does-java-support-structs)
+- [CS Dojo](https://www.youtube.com/watch?v=bum_19loj9A)
+
+
+# 15_Alan Turing
+---
 
