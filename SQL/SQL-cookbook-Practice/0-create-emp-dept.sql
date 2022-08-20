@@ -1,5 +1,10 @@
 /*
-Creating the famous emp and dept table in MySQL.
+Creating the famous example table in Oracle
+1. emp 
+2. dept
+3.  
+4. 
+in MySQL.
 */
 DROP TABLE IF EXISTS emp;
 
@@ -12,14 +17,6 @@ CREATE TABLE emp (
   sal decimal(7,2) default NULL,
   comm decimal(7,2) default NULL,
   deptno decimal(2,0) default NULL
-);
-
-DROP TABLE IF EXISTS dept;
-
-CREATE TABLE dept (
-  deptno decimal(2,0) default NULL,
-  dname varchar(14) default NULL,
-  loc varchar(13) default NULL
 );
 
 INSERT INTO emp VALUES ('7369','SMITH','CLERK','7902','1980-12-17','800.00',NULL,'20');
@@ -37,7 +34,41 @@ INSERT INTO emp VALUES ('7900','JAMES','CLERK','7698','1981-12-03','950.00',NULL
 INSERT INTO emp VALUES ('7902','FORD','ANALYST','7566','1981-12-03','3000.00',NULL,'20');
 INSERT INTO emp VALUES ('7934','MILLER','CLERK','7782','1982-01-23','1300.00',NULL,'10');
 
+-- -----------------------------------------------------------------------------------------------------------
+DROP TABLE IF EXISTS dept;
+
+CREATE TABLE dept (
+  deptno decimal(2,0) default NULL,
+  dname varchar(14) default NULL,
+  loc varchar(13) default NULL
+);
+
 INSERT INTO dept VALUES ('10','ACCOUNTING','NEW YORK');
 INSERT INTO dept VALUES ('20','RESEARCH','DALLAS');
 INSERT INTO dept VALUES ('30','SALES','CHICAGO');
 INSERT INTO dept VALUES ('40','OPERATIONS','BOSTON');
+-- -----------------------------------------------------------------------------------------------------------
+
+-- This table is first used in chapter 3
+DROP TABLE IF EXISTS emp_bonus;
+
+CREATE TABLE emp_bonus (
+    empno DECIMAL(4,0) NOT NULL,
+    received DATE default NULL,
+    typ INT default NULL 
+);
+
+-- values below is for Practice 3.4 ish
+-- INSERT INTO emp_bonus VALUES('7369','2005-03-14','1');
+-- INSERT INTO emp_bonus VALUES('7900','2005-03-14','2');
+-- INSERT INTO emp_bonus VALUES('7788','2005-03-14','3');
+
+-- for Practice 3.9
+INSERT INTO emp_bonus VALUES('7934','2005-03-17','1');
+INSERT INTO emp_bonus VALUES('7934','2005-02-15','2');
+INSERT INTO emp_bonus VALUES('7839','2005-02-15','3');
+INSERT INTO emp_bonus VALUES('7782','2005-02-15','1');
+
+
+
+
