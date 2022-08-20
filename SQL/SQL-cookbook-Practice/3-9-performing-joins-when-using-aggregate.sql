@@ -15,6 +15,7 @@ For typ 1 bonus, 10% salaray, 2 for 20% salary, 3 for 30% salary.
 5. 按员工号进行groupby, 之后加括号让其变为subquery
 6. 按deptno进行第二次groupby
 */
+
 SELECT
 dummy.deptno,
 SUM(dummy.SAL) as dept_10_total_salary,
