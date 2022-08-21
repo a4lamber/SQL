@@ -1,5 +1,6 @@
 /* 
-Trick: 如何用aliased name来做where的filtering
+Trick: 如何用aliased name来做where的filtering.
+Note:
 Where clause is evaluated before select so it wouldn't know the alias
 name "sal AS salary". Therefore, workaround would be subquery as table
 or inline view in textbook. 
