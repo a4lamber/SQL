@@ -1,6 +1,7 @@
 /*
-Summary: creating pivot table for manipulation.
-PIVOTTTTTTT!
+Summary 
+-------------------------------------------------------------------------
+creating pivot table for manipulation. PIVOTTTTTTT!
 */
 
 # For t1 pivot table

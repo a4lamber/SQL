@@ -1,13 +1,20 @@
 /*
-Problem: You want to sort by comm if job is 'salesman'
+Problem
+-------------------------------------------------------------------------
+You want to sort by comm if job is 'salesman'
 otherwise you sort by sal. 
 也蛮make sense的，销售用提成排序，其他人用salary排序
-Solution:
+
+Solution
+-------------------------------------------------------------------------
 - subquery with a 工具人 column created by CASE
-- ORDER BY + CASE
+- ORDER BY 联名 CASE
 */
 SELECT 
-    ename, sal as salary, job, comm as commission
+    ename, 
+    sal as salary, 
+    job, 
+    comm as commission
 FROM
     (SELECT 
         ename,

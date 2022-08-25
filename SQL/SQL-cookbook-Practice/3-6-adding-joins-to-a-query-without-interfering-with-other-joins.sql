@@ -1,8 +1,11 @@
 /*
-Problem: Return all employees, the location of the department in which they work and the
+Problem
+-------------------------------------------------------------------------
+Return all employees, the location of the department in which they work and the
 date they received a bonus.
 
-Discussion:
+Discussion
+-------------------------------------------------------------------------
 需要的信息有
 - all employees info from emp table
 - location of department from dept table
@@ -11,7 +14,10 @@ Discussion:
 
 # Solution 1: three table join
 SELECT 
-    e.empno, e.ename, d.loc, eb.received
+    e.empno, 
+    e.ename,
+    d.loc, 
+    eb.received
 FROM
     emp e
         INNER JOIN
@@ -19,3 +25,5 @@ FROM
         LEFT OUTER JOIN
     emp_bonus eb ON e.empno = eb.empno
 ORDER BY e.empno
+
+

@@ -1,5 +1,7 @@
 /*
-Problem: You want to know whether two tables or views have the same data (Cardinality and values).
+Problem
+-------------------------------------------------------------------------
+You want to know whether two tables or views have the same data (Cardinality and values).
 
 应用场景有些少,很少来比较俩table有什么不同和相同，只是单纯的向数据库提款, 所以略
 */

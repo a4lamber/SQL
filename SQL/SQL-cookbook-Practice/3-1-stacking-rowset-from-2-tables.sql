@@ -1,10 +1,13 @@
 /*
-Problem: display the name and department# in department#10
+Problem
+-------------------------------------------------------------------------
+display the name and department# in department#10
 from table EMP on top of the name and department# from table DEPT
 
-Note:
-- UNION ALL and UNION, UNION would remove duplicates while UNION ALL won'ts.
-- Use PIVOTTT table as a toolman table for 
+Note
+-------------------------------------------------------------------------
+- UNION ALL and UNION, UNION would remove duplicates while UNION ALL won't.
+- Use PIVOTTTTTT table as a toolman table for 
 	- creating line separator
     - prob pivot later on? idk yet. 
 */
@@ -16,7 +19,7 @@ WHERE
     deptno = 10 
 UNION ALL 
 -- Using pivot table for creating a separator
-SELECT '------------',null from t1
+SELECT '------------',NULL FROM t1
 UNION ALL
 SELECT 
     dname, deptno

@@ -26,7 +26,7 @@ Note
 
 
 
-# Step2: Add a filtering condition
+-- Step2: Add a filtering condition
 -- select ename, iter.id
 -- from (select ename from emp where ename = 'KING') e cross join (select id from t10) iter
 -- where iter.id <= length(e.ename)

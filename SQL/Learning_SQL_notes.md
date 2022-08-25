@@ -102,7 +102,9 @@ As for VARCHAR
 
 > VARCHAR is a variable length string data type, so it holds only the characters you assign to it. VARCHAR takes up 1 byte per character, + 2 bytes to hold length information. For example, if you set a VARCHAR(100) data type = 'Claire', then it would takes up 6 bytes (For C, L, A, I, R, E) plus 2 bytes, 8 bytes in total.
 
-这样比较下来，varchar只消耗额外2 bytes,实在是太便宜了，还能动态控制每一个data的储存空间。Practically speaking, never char.
+这样比较下来，varchar只消耗额外2 bytes,相对代价比较小,比较varchar的鲁棒性比char要高.
+
+> `VARCHAR`其中的2 bytes for length information, 实际上是储存string (array)在memory里要读取几个数.
 
 For longer data, such as email or XML, we gonna use text types (mediumtext and longtext) to store.
 
@@ -393,7 +395,7 @@ In SQL, the **selection statemenet** consists of several components/clauses.
 | ---------- | ------------------------------------------------------------------------------------- |
 | `SELECT`   | determine which columns to include in the query's result set                          |
 | `FROM`     | identifies the tables from which to retrieve data and how the tables should be joined |
-| `WHERE`    | filters out unwanted raw data                                                         |
+| `WHERE`    | filters out unwanted raw data. Compiled earlier than select.                          |
 | `group by` | Used to group rows together by common column values                                   |
 | `having`   | filters out unwanted grouped data                                                     |
 | `order by` | sorts the rows of the final result set by one or more columns                         |
@@ -480,12 +482,12 @@ order by actor_id
 
 You may picture a table as columns and rows of set data but in reality it is like water.
 
-| Type             | Note                                           | Statement              |
-| ---------------- | ---------------------------------------------- | ---------------------- |
-| Permanent tables | created using the create table statement       | CREATE TABLE           |
-| Derived tables   | rows returned by a subquery and held in memory | 无限套娃 (subquery)        |
-| Temporary tables | volatile data held in memory                   | CREATE TEMPORARY TABLE |
-| Virtual tables   | created using the "**create view**" statement  | CREATE VIEW            |
+| Type             | Note                                                                               | Statement              |
+| ---------------- | ---------------------------------------------------------------------------------- | ---------------------- |
+| Permanent tables | created using the create table statement                                           | CREATE TABLE           |
+| Derived tables   | rows returned by a subquery and held in memory. **Derived table must be aliased.** | 无限套娃 (subquery)        |
+| Temporary tables | volatile data held in memory                                                       | CREATE TEMPORARY TABLE |
+| Virtual tables   | created using the "**create view**" statement. Kinda similar to excel note.        | CREATE VIEW            |
 
 #### Derived (subquery-generated)tables
 
@@ -1180,6 +1182,7 @@ FROM
     customer
 WHERE
     last_name REGEXP '^[QY]';
+# ^ for negation
 ```
 
 Refers to here for more info, [Mastering Regular Expressions, 3rd Edition [Book]](https://www.oreilly.com/library/view/mastering-regular-expressions/0596528124/)
@@ -2808,7 +2811,7 @@ WHERE
             amount = 0);
 ```
 
-You should avoid the pitfall for both not in and <> all when it comes to null. You have to make sure the set of values you use are null-free. Any attempt to equate a value to null yields unknown.
+You should avoid the pitfall for both not in and <> all when it comes to null. You have to make sure the set of values you use are null-free. Any attempt to equate a value to null yields unknown. (三种boolean status in SQL, TRUE, FALSE, UNKNOWN)
 
 > 案例: return the total number of film rentals for all customers in North america. North america has canada, united states and mexico. Look at the EER diagram shown below,
 

@@ -1,11 +1,14 @@
 /*
-Creating the famous example table in Oracle
+Description
+-------------------------------------------------------------------------
+Creating the famous example table in Oracle.
 1. emp 
 2. dept
-3.  
-4. 
 in MySQL.
 */
+
+-- emp table
+-- -----------------------------------------------------------------------------------------------------------
 DROP TABLE IF EXISTS emp;
 
 CREATE TABLE emp (
@@ -34,6 +37,7 @@ INSERT INTO emp VALUES ('7900','JAMES','CLERK','7698','1981-12-03','950.00',NULL
 INSERT INTO emp VALUES ('7902','FORD','ANALYST','7566','1981-12-03','3000.00',NULL,'20');
 INSERT INTO emp VALUES ('7934','MILLER','CLERK','7782','1982-01-23','1300.00',NULL,'10');
 
+-- dept TABLE
 -- -----------------------------------------------------------------------------------------------------------
 DROP TABLE IF EXISTS dept;
 
@@ -49,7 +53,10 @@ INSERT INTO dept VALUES ('30','SALES','CHICAGO');
 INSERT INTO dept VALUES ('40','OPERATIONS','BOSTON');
 -- -----------------------------------------------------------------------------------------------------------
 
+-- emp_bonus TABLE
 -- This table is first used in chapter 3
+-- -----------------------------------------------------------------------------------------------------------
+
 DROP TABLE IF EXISTS emp_bonus;
 
 CREATE TABLE emp_bonus (

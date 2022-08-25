@@ -1,9 +1,15 @@
-/*Note in different DBMS, different syntax for 
+/*
+Note
+-------------------------------------------------------------------------
+Inn different DBMS, different syntax for 
 string concatenation is used.
+
 MySQL:
-see below
+see code
+
 SQL Server:
 select ename + ' WORKS AS A ' + job
+
 DB2, Oracle, PostgreSQL:
 select ename || ' WORKS AS A ' || job
 */

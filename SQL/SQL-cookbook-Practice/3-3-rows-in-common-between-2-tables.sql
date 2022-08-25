@@ -1,5 +1,7 @@
 /*
-Problem: You want to find common rows between two tables, but there are
+Problem
+-------------------------------------------------------------------------
+You want to find common rows between two tables, but there are
 multiple columns on which you can join.
 1. SQL Table和VIEW之间，找相同行
 */
@@ -14,7 +16,7 @@ multiple columns on which you can join.
 --     WHERE
 --         job = 'CLERK'
 
-# Solution 1: with where clause
+# Solution 1: equi-join ancient style bro
 -- SELECT 
 --     e.empno, e.ename, e.job, e.sal, e.deptno
 -- FROM
@@ -27,10 +29,15 @@ multiple columns on which you can join.
 
 # Solution 2: join clause
 SELECT
-	e.empno, e.ename, e.job,e.sal,e.deptno
+	e.empno, 
+	e.ename, 
+	e.job,
+	e.sal,
+	e.deptno
 FROM
 	emp e inner join v1 
-on (e.ename = v1.ename 
+on (
+	e.ename = v1.ename 
 and e.job = v1.job
-and e.sal = v1.sal)
+and e.sal = v1.sal);
 

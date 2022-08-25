@@ -1,5 +1,7 @@
 /*
-Problem: show tables in a schema MySQL.
+Problem
+-------------------------------------------------------------------------
+show tables in a schema MySQL.
 
 MetaDATA querying的命名是用snake convention的.
 */

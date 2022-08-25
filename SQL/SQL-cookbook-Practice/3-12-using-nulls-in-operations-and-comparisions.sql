@@ -1,17 +1,23 @@
 /*
-Problem: return all employees in EMP whose commission is less than
+Problem
+-------------------------------------------------------------------------
+return all employees in EMP whose commission is less than
 the comission of employee WARD. Employee with a NULL commission should 
 be included as well
 */
-select ename,is_less_ward
-from
+SELECT 
+	ename,
+	is_less_ward
+FROM
 (
-select empno,
-	   ename,
-       coalesce(comm,0),
-	   CASE 
-			WHEN coalesce(comm,0) < (select comm from emp where ename = 'WARD') then 1
-            else 0
-		END as is_less_ward
-from emp) as dummy
-where is_less_ward = 1
+SELECT 
+	empno,
+	ename,
+    COALESCE(comm,0),
+	CASE 
+		-- 比较每个人的commission with ward's commission (scalar subquery)
+		WHEN COALESCE(comm,0) < (SELECT comm FROM emp WHERE ename = 'WARD') THEN 1
+        ELSE 0
+	END AS is_less_ward
+FROM emp) AS dummy
+WHERE is_less_ward = 1
