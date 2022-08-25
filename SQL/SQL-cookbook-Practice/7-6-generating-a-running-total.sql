@@ -19,9 +19,9 @@ select
 	ename,
     empno,
     sal,
-    # include EMPNO (primary key) to avoid duplicate values
+    -- include EMPNO (primary key) to avoid duplicate values
     sum(sal) over (order by sal,empno) as running_total_sal,
-    # 不加primary key (规避由于sal相同，导致的加两次ward.sal = marthin.sal, scott.sal = ford.sal)
+    -- 不加primary key (规避由于sal相同，导致的加两次ward.sal = marthin.sal, scott.sal = ford.sal)
     sum(sal) over (order by sal) as running_total_wrong
 from emp
 order by sal

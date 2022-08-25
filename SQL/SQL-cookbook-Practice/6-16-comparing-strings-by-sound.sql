@@ -27,11 +27,11 @@ US Census需要解决同一个姓名或者地区的多种不同拼法(英式美�
 -- INSERT INTO sound VALUES ('Shaekspir');
 -- INSERT INTO sound VALUES ('Shakespar');
 
-select 
-	an1.aname as name1,
-    an2.aname as name2,
-    SOUNDEX(an1.aname) as Soundex_Name
-from sound an1 
-join sound an2
-on SOUNDEX(an1.aname) = SOUNDEX(an2.aname)
-and an1.aname not like an2.aname 
+SELECT 
+	an1.aname AS name1,
+    an2.aname AS name2,
+    SOUNDEX(an1.aname) AS Soundex_Name
+FROM sound an1 
+JOIN sound an2
+ON SOUNDEX(an1.aname) = SOUNDEX(an2.aname)
+AND an1.aname NOT LIKE an2.aname 

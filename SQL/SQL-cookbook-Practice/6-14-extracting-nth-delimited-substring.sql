@@ -25,15 +25,16 @@ gina
 -- select 'tina,gina,jaunita,regina,leena' as nam
 --  from t1;
 
-select
-	x.positional_nam
-from
+SELECT
+    x.positional_nam
+FROM
 (
-select 
-	substring_index(substring_index(a.nam,',',b.id),',',-1) as positional_nam,
+SELECT 
+	substring_index(substring_index(a.nam,',',b.id),',',-1) AS positional_nam,
     a.nam,
-    b.id as iterator
-from
-(select nam from v4) as a cross join (select id from t20) as b
-) as x
-where x.iterator = 2
+    b.id AS iterator
+FROM
+(SELECT nam FROM v4) AS a 
+    CROSS JOIN (SELECT id FROM t20) AS b
+) AS x
+WHERE x.iterator = 2

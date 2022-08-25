@@ -40,18 +40,21 @@ Find out way and make it work!
 
 # Solution 2
 
-select ename,sal,deptno
-from emp
-where empno in 
+SELECT 
+    ename,
+    sal,
+    deptno
+FROM emp
+WHERE empno IN 
 (
-select 
-	#substring_index(a.tool,',',b.id),
-    substring_index(substring_index(a.tool,',',b.id),',',-1) as criteria#,
-    #id
+SELECT 
+	-- substring_index(a.tool,',',b.id),
+    substring_index(substring_index(a.tool,',',b.id),',',-1) AS criteria -- ,
+    -- id
 from 
-	(select '7654,7698,7782,7788' as tool from t1) as a cross join (select id from t20) as b
-# '7654,7698,7782,7788' - '7654769877827788' + 1 = 一共有四组数据
-WHERE b.id <= (length(a.tool) - length(replace(a.tool,',','')) + 1)   
+	(SELECT '7654,7698,7782,7788' AS tool FROM t1) AS a CROSS JOIN (SELECT id FROM t20) AS b
+-- '7654,7698,7782,7788' - '7654769877827788' + 1 = 一共有四组数据
+WHERE b.id <= (LENGTH(a.tool) - LENGTH(REPLACE(a.tool,',','')) + 1)   
 ) 
     
     

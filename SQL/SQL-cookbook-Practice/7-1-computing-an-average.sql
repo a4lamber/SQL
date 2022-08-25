@@ -18,14 +18,15 @@ Note
 
 -- SET sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
 
-# Solution: get average salary for all employees
-# select avg(sal) from emp
+-- Solution: get average salary for all employees
+-- select avg(sal) from emp
 
-# Solution: get average salary for each department
-select  
+-- Solution: get average salary for each department
+
+SELECT  
         deptno,
-        group_concat(ename order by ename separator ',') as names,
-        group_concat(sal separator ',') as sals,
-        avg(sal) as dept_sal_avg
-from 	emp
-group by deptno
+        GROUP_CONCAT(ename ORDER BY ename SEPARATOR ',') AS NAMES,
+        GROUP_CONCAT(sal SEPARATOR ',') AS sals,
+        AVG(sal) AS dept_sal_avg
+FROM emp
+GROUP BY deptno

@@ -51,11 +51,11 @@ CAST() is kinda general, for more specific
 --     WHERE
 --         deptno = 30
 
-# Solution: 
-select 
-data 
-from v3
-where data regexp '[^0-9a-zA-Z]' = 0
+-- Solution: 
+SELECT 
+DATA 
+FROM v3
+WHERE DATA regexp '[^0-9a-zA-Z]' = 0
 /*
 符号^: stands for negation
 '[^0-9a-zA-Z]' 判断是否不是alphanumeric

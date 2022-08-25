@@ -9,8 +9,8 @@ compute running product on a numeric column.
 - 见markdown for details.
 */
 
-select 
+SELECT 
 	empno,
     sal,
-    exp(sum(ln(sal)) over (order by sal,empno)) as running_product
-from emp
+    EXP(SUM(ln(sal)) OVER (ORDER BY sal,empno)) AS running_product
+FROM emp

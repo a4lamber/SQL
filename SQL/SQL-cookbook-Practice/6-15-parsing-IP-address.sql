@@ -13,7 +13,9 @@ A       B     C    D
 
 思路:
 -------------------------------------------------------------------------
-这道题来解释一下nested substring_index()函数为啥可以用来对delimited string进行一个分解吧
+这道题来解释一下nested substring_index()函数为啥可以用来对delimited string进行一个分解吧.
+substring_index(string, delimiter, num): return the substring from string with the num of delimiter.
+
 Step1:
 substring_index(tool.ip,'.',1)	111.22.3.4 --> 111
 substring_index(tool.ip,'.',2)	111.22.3.4 --> 111.22
@@ -29,12 +31,12 @@ substring_index(substring_index(tool.ip,'.',4),'.',-1) as D		111.22.3.4 --> 111.
 */
 
 
-select 
-	substring_index(substring_index(tool.ip,'.',1),'.',-1) as A,
-	substring_index(substring_index(tool.ip,'.',2),'.',-1) as B,
-	substring_index(substring_index(tool.ip,'.',3),'.',-1) as C,
-	substring_index(substring_index(tool.ip,'.',4),'.',-1) as D
-from
-(select '111.22.3.4' ip from t1) as tool
+SELECT 
+	substring_index(substring_index(tool.ip,'.',1),'.',-1) AS A,
+	substring_index(substring_index(tool.ip,'.',2),'.',-1) AS B,
+	substring_index(substring_index(tool.ip,'.',3),'.',-1) AS C,
+	substring_index(substring_index(tool.ip,'.',4),'.',-1) AS D
+FROM
+(SELECT '111.22.3.4' ip FROM t1) AS tool
 
 

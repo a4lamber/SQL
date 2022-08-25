@@ -4,5 +4,8 @@ Problem
 Order your result set based on a substring.
 */
 
-select ename, substring(ename,-2) last2 from emp
-order by substring(ename,-2)
+SELECT 
+    ename, 
+    SUBSTRING(ename,-2) last2 
+FROM emp
+ORDER by SUBSTRING(ename,-2)

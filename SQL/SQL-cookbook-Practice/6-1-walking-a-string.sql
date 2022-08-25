@@ -1,7 +1,6 @@
 /*
 Problem
 -------------------------------------------------------------------------
-
 You want to traverse a string to return each character as a row,
 but SQL lacks a loop operation. For example, you want to display
 the ENAME 'king' from table EMP as four rows, where each row 
@@ -19,26 +18,34 @@ Note
 
 
 -- # Step 1:cartesian product 有两种表达方式 
--- # 方式1: SELECT * FROM tableA, tableB
+-- # 方式1: SELECT * FROM tableA, tableB (Ancient style of join, avoid at all cost)
 -- # 方式2: select * from tableA CROSS JOIN tableB
--- select ename, iter.id
--- from (select ename from emp where ename = 'KING') e cross join (select id from t10) iter
+-- SELECT 
+-- 	ename, 
+--     iter.id
+-- FROM (SELECT ename FROM emp WHERE ename = 'KING') e 
+-- CROSS JOIN (SELECT id FROM t10) AS iter
 
 
 
 -- Step2: Add a filtering condition
--- select ename, iter.id
--- from (select ename from emp where ename = 'KING') e cross join (select id from t10) iter
--- where iter.id <= length(e.ename)
+-- SELECT
+-- 	ename,
+--     iter.id
+-- FROM (SELECT ename FROM emp WHERE ename = 'KING') e 
+-- CROSS JOIN (SELECT id FROM t10) AS iter
+-- WHERE iter.id <= LENGTH(e.ename)
 
 
 -- # StepFinal: use SUBSTR to walk
-SELECT 
+SELECT
+    -- 动态的starting position, 相当于string中的index了
     SUBSTR(e.ename, iter.id, 1) AS walk
 FROM
-	# 选择你想要的string
-    (SELECT ename FROM emp WHERE ename = 'KING') e,
-    # 用pivot table获取行数用来做itertor = 1,2,3,...10
-    (SELECT id AS id FROM t10) iter
+	-- 选择你想要的string with scalar subquery
+    (SELECT ename FROM emp WHERE ename = 'KING') e CROSS JOIN
+    -- 用pivot table t10的id column作为获取行数用来做itertor = 1,2,3,...10
+    (SELECT id AS id FROM t10) AS iter
 WHERE
-    iter.id <= LENGTH(e.ename)
+    -- ename这个string的index, 只需要到LENGTH(e.enam)为止
+    iter.id <= LENGTH(e.ename);

@@ -12,5 +12,9 @@ https://www.w3resource.com/mysql/aggregate-functions-and-grouping/aggregate-func
 
 -- SET sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
 
-select deptno,ename,count(*), GROUP_CONCAT(ename SEPARATOR ',')from emp
-group by deptno
+SELECT 
+    deptno,
+    ename,
+    COUNT(*),
+    GROUP_CONCAT(ename SEPARATOR ',')FROM emp
+GROUP BY deptno
