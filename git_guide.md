@@ -126,7 +126,7 @@ From what i have been watching so far, the CS 50 by Harvard gives the best and c
  
 - [x] git-Harvard CS 50 by Brian https://www.youtube.com/watch?v=eulnSXkhE7I&t=53s
 - [x] git-tech with tim https://www.youtube.com/watch?v=DVRQoVRzMIY
-- [x] git-Corey schafer https://www.youtube.com/watch?v=HVsySz-h9r4
-
-
+- [git by Corey schafer](https://www.youtube.com/watch?v=HVsySz-h9r4)
+- [git by David Mahler](https://www.youtube.com/watch?v=uR6G2v_WsRA&t=10s)
+  - many visuals
 
