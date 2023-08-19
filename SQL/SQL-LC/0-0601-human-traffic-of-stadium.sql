@@ -1,6 +1,6 @@
-# Write your MySQL query statement below
+-- # Write your MySQL query statement below
 
-# Solution with window fcn
+-- # Solution with window fcn
 WITH cte AS
 (
 SELECT

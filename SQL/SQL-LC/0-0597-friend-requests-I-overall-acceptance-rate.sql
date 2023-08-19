@@ -1,4 +1,4 @@
-# Write your MySQL query statement below
+-- # Write your MySQL query statement below
 /*
 Question 1: return the overall acceptance rate;
 思路:
@@ -9,9 +9,9 @@ non-null value.
 - 原来想着用CTE求俩值，有些浪费内存，subquery as single-value就够够用了
 */
 
-# SELECT
-#     IFNULL(ROUND((SELECT count(distinct requester_id,accepter_id) FROM RequestAccepted)/
-#     (SELECT count(distinct sender_id,send_to_id) FROM FriendRequest),2),0.00) AS accept_rate
+ SELECT
+     IFNULL(ROUND((SELECT count(distinct requester_id,accepter_id) FROM RequestAccepted)/
+     (SELECT count(distinct sender_id,send_to_id) FROM FriendRequest),2),0.00) AS accept_rate
 
 /*
 Follow-up-1: return the acceptance rate for every month?

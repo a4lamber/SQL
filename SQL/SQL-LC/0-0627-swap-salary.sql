@@ -5,4 +5,4 @@ SET
         ELSE 'm'
     END;
 
-# Update table; There are two ways to use CASE.
+-- # Update table; There are two ways to use CASE.
